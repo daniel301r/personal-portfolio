@@ -1,3 +1,10 @@
+/* 
+
+color used in html tags on front page 
+color: #515152;
+
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +33,7 @@ body {
   width: 100%;
   height: 100%;
   font-size: 2rem;
+  z-index: -1;
 }
 
 /* figure out how to center it and still add effects */
@@ -72,21 +80,24 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  color: white;
 }
 
 .text-area h1{
   font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-area h1 span{
+  color: #08fdd8;
 }
 
 .text-area h1:before{
   content: '<h1>';
-  /* 
-  
-  font family 
-  color
-
-  */
+  color: #515152;
+  font-family: 'Cedarville Cursive', cursive;
   font-size: 1rem;
+  letter-spacing: .1rem;
   position: absolute;
   top: -1.2rem;
   left: -1.2rem;
@@ -94,13 +105,52 @@ body {
 
 .text-area h1:after{
   content: '</h1>';
-  /* 
-    font family 
-    color
-  */ 
+  color: #515152;
+  font-family: 'Cedarville Cursive', cursive;
   font-size: 1rem;
+  letter-spacing: .1rem;
   position: absolute;
   margin-top: 2.6rem;
   margin-left: 1rem;
 }
 
+.text-area h4{
+  color: #8d8d8d;
+  margin-bottom: 2rem;
+}
+
+.text-area a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #08fdd8;
+  border: 1px solid #08fdd8;
+  padding: .6rem 1.2rem;
+  letter-spacing: .2rem;
+}
+
+.text-area a:hover {
+  color: #222;
+  background-color: #08fdd8;
+}
+
+.tags{
+  position: absolute;
+  font-size: 1rem;
+  color: #515152;
+  margin-left: 1rem;
+  font-family: 'Cedarville Cursive', cursive;
+}
+
+.top-tags{
+  top: 1.5rem
+}
+
+.bottom-tags{
+  bottom: 3rem;
+}
+
+.bottom-tags span:nth-child(2){
+  position: absolute;
+  left: -1rem;
+  margin-top: .2rem;
+}

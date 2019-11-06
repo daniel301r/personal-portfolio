@@ -7,14 +7,14 @@ const FrontPage = () => {
             {/* make the tags a different font - curvise */}
             <span className="tags top-tags">{"<body>"}</span>
             <div className="text-area">
-                <h1>Hi,<br/>I'm Dan,<br/>web developer.</h1>
+                <h1>Hi,<br/>I'm <span>D</span>an,<br/>web developer.</h1>
                 <h4>Full-Stack Developer / React / Javascript</h4>
                 <Link to="/portfolio">Portfolio</Link>
             </div>
             <span className="tags bottom-tags">
-                {"</body>"}
+                {"</body>"} 
                 <br/>
-                {"</html>"}
+                <span>{"</html>"}</span>
             </span>
         </div>
     );
