@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const FrontPage = () => {
     return (
-        <div id="front-page">
+        <div id="front-page" className="content-container">
             {/* make the tags a different font - curvise */}
             <span className="tags top-tags">{"<body>"}</span>
             <div className="text-area">

@@ -1,14 +1,16 @@
 import React from 'react';
 
-const Project = () => {
+const Project = ({ project }) => {
+
     return (
         <div>
-            <h2>Project Name</h2>
-            <p>Short Description</p>
+            <h2>{project.name}</h2>
+            <p>{project.description}</p>
             <div>
                 <ul>
-                    <li>Links</li>
-                    <li>Links</li>
+                    {project.frontEndLink && <li>{project.frontEndLink}</li>}
+                    {project.backEndLink && <li>{project.backEndLink}</li>}
+                    {project.liveLink && <li>{project.liveLink}</li>}
                 </ul>
             </div>
             {/* could try and get multiple images to show different parts of the app */}
@@ -17,7 +19,7 @@ const Project = () => {
             <div>
                 <h5>Technologies Used</h5>
                 <ul>
-                    <li>Technology</li>
+                    {project.tech.map((el, i) => <li key={i}>{el}</li>)} 
                 </ul>
             </div>
         </div>

@@ -5,6 +5,10 @@ color: #515152;
 
 */
 
+:root {
+  --main-text-color: #8d8d8d;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +27,13 @@ body {
 .App {
   height: 100vh;
   width: 100vw;
+}
+
+/* Content Container */
+
+.content-container {
+  margin: 0 12%;
+  height: 100%
 }
 
 /* header */
@@ -70,12 +81,6 @@ body {
 
 /* front page */
 
-
-#front-page {
-  margin: 0 15%;
-  height: 100%
-}
-
 .text-area {
   position: absolute;
   top: 50%;
@@ -115,7 +120,7 @@ body {
 }
 
 .text-area h4{
-  color: #8d8d8d;
+  color: var(--main-text-color);
   margin-bottom: 2rem;
 }
 
@@ -153,4 +158,10 @@ body {
   position: absolute;
   left: -1rem;
   margin-top: .2rem;
+}
+
+/* Portfolio */
+
+#portfolio {
+  color: var(--main-text-color);
 }
