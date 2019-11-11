@@ -7,6 +7,7 @@ color: #515152;
 
 :root {
   --main-text-color: #8d8d8d;
+  --secondary-text-color: #cacaca;
 }
 
 * {
@@ -181,7 +182,7 @@ ul {
 .about h1 {
   margin-bottom: 1.5rem;
   font-size: 3rem;
-  color: #cacaca;
+  color: var(--secondary-text-color);
 }
 
 .about p {
@@ -211,5 +212,58 @@ ul {
 }
 
 /* Project */
+
+.project-about {
+  margin-bottom: 1rem;
+}
+
+.project-about h1{
+  color: var(--secondary-text-color);
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.project-about p{
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+}
+
+#project img {
+  width: 100%;
+  box-shadow: 8px 8px 0 rgba(0,0,0,.15);
+}
+
+.section {
+  margin-top: 1rem;
+}
+
+.section h4{
+  color: var(--secondary-text-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.section li{
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.section a{
+  color: var(--secondary-text-color);
+  text-decoration: none;
+}
+
+.tech-used{
+  list-style: circle;
+  padding: 0 1.5rem;
+}
+
+/* About Page */
+
+#about {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
 
 

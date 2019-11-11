@@ -10,20 +10,34 @@ const Project = ({ projects, match }) => {
 
     return (
         <div id="project" className="content-container text-pages">
-            <h2>{project.name}</h2>
-            <p>{project.description}</p>
-            <div>
+            <div className="project-about">
+                <h1>{project.name}</h1>
+                <p>{project.description}</p>
+            </div>
+            <img src={project.img}/>
+            <div className="section">
+                <h4>Links</h4>
                 <ul>
-                    {project.frontEndLink && <li>Front End Code: {project.frontEndLink}</li>}
-                    {project.backEndLink && <li>Back End Code: {project.backEndLink}</li>}
-                    {project.liveLink && <li>Live Demo: {project.liveLink}</li>}
+                    {project.frontEndLink && 
+                        <li>Front End Code: 
+                            <a href={project.frontEndLink} target="_blank"> {project.frontEndLink}</a>
+                        </li>}
+                    {project.backEndLink && 
+                        <li>Back End Code: 
+                            <a href={project.backEndLink} target="_blank"> {project.backEndLink}</a>
+                        </li>}
+                    {project.liveLink && 
+                        <li>Live Demo: 
+                            <a href={project.liveLink} target="_blank"> {project.liveLink}</a>
+                        </li>}
                 </ul>
             </div>
-            <img/>
-            <p>About Section</p>
-            <div>
-                <h5>Technologies Used</h5>
-                <ul>
+            <div className="section">
+                <h4>About</h4>
+            </div>
+            <div className="section">
+                <h4>Technologies Used</h4>
+                <ul className="tech-used">
                     {project.tech.map((el, i) => <li key={i}>{el}</li>)} 
                 </ul>
             </div>
