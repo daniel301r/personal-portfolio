@@ -104,6 +104,7 @@ ul {
 .text-area h1{
   font-size: 3.5rem;
   margin-bottom: 1rem;
+  letter-spacing: -.15rem;
 }
 
 .text-area h1 span{
@@ -237,23 +238,23 @@ ul {
   margin-top: 1rem;
 }
 
-.section h4{
+.section h4 {
   color: var(--secondary-text-color);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-.section li{
+.section li {
   font-size: 1.1rem;
   margin-bottom: 0.6rem;
 }
 
-.section a{
+.section a {
   color: var(--secondary-text-color);
   text-decoration: none;
 }
 
-.tech-used{
+.tech-used {
   list-style: circle;
   padding: 0 1.5rem;
 }
@@ -261,9 +262,53 @@ ul {
 /* About Page */
 
 #about {
-  height: 100vh;
-  width: 100vw;
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 
+.about-me, .skills{
+  color: var(--main-text-color);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-me {
+  background-color: #222;
+  z-index: -2;
+}
+
+.about-me-container, .skills-container{
+  width: 65%;
+}
+
+.about-me-container{
+  margin-left: 2.5rem;
+}
+
+.skills-container{
+  margin-right: 2rem;
+}
+
+.skills-container h1, .about-me-container h1{
+  margin-bottom: 1rem;
+  color: var(--secondary-text-color);
+}
+
+.skills-container h3{
+  margin: .4rem 0;
+}
+
+.skills-container p, .about-me-container p{
+  margin-bottom: .4rem;
+  font-size: 1.2rem;
+}
+
+.about-me-container p {
+  padding: .5rem;
+}
 
