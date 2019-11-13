@@ -50,14 +50,10 @@ ul {
 }
 
 /* header */
-
 #header {
   position: fixed;
   color: #8a8a8a;
-  width: 100%;
-  height: 100%;
   font-size: 2rem;
-  z-index: -1;
 }
 
 /* figure out how to center it and still add effects */
@@ -67,11 +63,6 @@ ul {
   left: 5%;
   top: calc(50% - 50px);
 }
-
-.prev:hover{
-  transform: scale(1.3);
-}
-
 
 .next{
   position: fixed;
@@ -279,7 +270,8 @@ ul {
 
 .about-me {
   background-color: #222;
-  z-index: -2;
+  /* see if this is needed */
+  /* z-index: -2; */
 }
 
 .about-me-container, .skills-container{

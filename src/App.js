@@ -51,11 +51,10 @@ class App extends Component {
   }
   
   render(){
-
     return (
       <div className="App">
         <BrowserRouter>
-          <Header />
+          <Header/>
           <Switch>
             <Route exact path='/' component={FrontPage}/>
             <Route exact path='/portfolio' render={(props) => <Portfolio {...props} projects={this.state.projects} />}/>
