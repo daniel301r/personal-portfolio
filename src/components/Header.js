@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
 class Header extends Component {
-    
+
     movePage = (page, direction) => {
         if(direction === 'prev'){
             switch(page){
@@ -11,6 +11,9 @@ class Header extends Component {
                     break
                 case '/about':
                     this.props.history.push('/')
+                    break
+                case '/contact':
+                    this.props.history.push('/portfolio')
                     break
                 case '/portfolio/portfolio':
                     this.props.history.push('/portfolio/quiz-creator')
@@ -31,6 +34,9 @@ class Header extends Component {
                     break
                 case '/about':
                     this.props.history.push('/portfolio')
+                    break
+                case '/portfolio':
+                    this.props.history.push('/contact')
                     break
                 case '/portfolio/find-a-pet':
                     this.props.history.push('/portfolio/ready-steady-recipe')
@@ -76,6 +82,13 @@ class Header extends Component {
             return (
                 <div id="header">
                         <div className="back-list" onClick={() => this.movePage(curPage, 'portfolio')}><i className="fas fa-ellipsis-h"></i></div>
+                        <div className="prev" onClick={() => this.movePage(curPage, 'prev')}><i className="fas fa-chevron-left"></i></div>
+                        <div className="hamburger"><i className="fas fa-bars"></i></div>
+                </div>
+            );
+        } else if (curPage === '/contact'){
+            return (
+                <div id="header">
                         <div className="prev" onClick={() => this.movePage(curPage, 'prev')}><i className="fas fa-chevron-left"></i></div>
                         <div className="hamburger"><i className="fas fa-bars"></i></div>
                 </div>

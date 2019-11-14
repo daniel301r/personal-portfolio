@@ -7,6 +7,7 @@ import FrontPage from './components/FrontPage';
 import Portfolio from './components/Portfolio';
 import Project from './components/Project';
 import About from './components/About';
+import Contact from './components/Contact';
 
 import petImg from './img/adoptapet.png';
 import recipesImg from './img/recipes.png';
@@ -60,6 +61,7 @@ class App extends Component {
             <Route exact path='/portfolio' render={(props) => <Portfolio {...props} projects={this.state.projects} />}/>
             <Route path='/portfolio/:project' render={(props) => <Project {...props} projects={this.state.projects} />}/>
             <Route path='/about' component={About}/>
+            <Route path='/contact' component={Contact}/>
           </Switch>    
         </BrowserRouter>
       </div>
