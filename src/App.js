@@ -8,6 +8,7 @@ import Portfolio from './components/Portfolio';
 import Project from './components/Project';
 import About from './components/About';
 import Contact from './components/Contact';
+import Modal from './components/Modal';
 
 import petImg from './img/adoptapet.png';
 import recipesImg from './img/recipes.png';
@@ -48,14 +49,22 @@ class App extends Component {
         img: portImg,
         description: 'Behind the scenes of this website',
         tech: []
-    }]
+    }],
+    modalShow: false
   }
   
+  toggleModal = () => {
+    this.setState({
+      modalShow: !this.state.modalShow
+    })
+  }
+
   render(){
     return (
       <div className="App">
         <BrowserRouter>
-          <Header/>
+          <Header show={this.state.modalShow} toggle={this.toggleModal}/>
+          <Modal show={this.state.modalShow} toggle={this.toggleModal}/>
           <Switch>
             <Route exact path='/' component={FrontPage}/>
             <Route exact path='/portfolio' render={(props) => <Portfolio {...props} projects={this.state.projects} />}/>

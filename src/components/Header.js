@@ -54,11 +54,12 @@ class Header extends Component {
 
 
     render(){
-        const curPage = this.props.location.pathname;
+        const curPage = this.props.location.pathname; 
+        
         if(curPage === '/'){
             return (
                 <div id="header">
-                    <div className="hamburger"><i className="fas fa-bars"></i></div>
+                    <div className="hamburger" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
                     <div className="next" onClick={() => this.movePage(curPage, 'next')}><i className="fas fa-chevron-right"></i></div>
                 </div>
             )
@@ -66,7 +67,7 @@ class Header extends Component {
             return (
                 <div id="header">
                         <div className="prev" onClick={() => this.movePage(curPage, 'prev')}><i className="fas fa-chevron-left"></i></div>
-                        <div className="hamburger"><i className="fas fa-bars"></i></div>
+                        <div className="hamburger" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
                         <div className="next" onClick={() => this.movePage(curPage, 'next')}><i className="fas fa-chevron-right"></i></div>
                 </div>
             ); 
@@ -74,7 +75,7 @@ class Header extends Component {
             return (
                 <div id="header">
                         <div className="back-list" onClick={() => this.movePage(curPage, 'portfolio')}><i className="fas fa-ellipsis-h"></i></div>
-                        <div className="hamburger"><i className="fas fa-bars"></i></div>
+                        <div className="hamburger" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
                         <div className="next" onClick={() => this.movePage(curPage, 'next')}><i className="fas fa-chevron-right"></i></div>
                 </div>
             );
@@ -83,14 +84,14 @@ class Header extends Component {
                 <div id="header">
                         <div className="back-list" onClick={() => this.movePage(curPage, 'portfolio')}><i className="fas fa-ellipsis-h"></i></div>
                         <div className="prev" onClick={() => this.movePage(curPage, 'prev')}><i className="fas fa-chevron-left"></i></div>
-                        <div className="hamburger"><i className="fas fa-bars"></i></div>
+                        <div className="hamburger" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
                 </div>
             );
         } else if (curPage === '/contact'){
             return (
                 <div id="header">
                         <div className="prev" onClick={() => this.movePage(curPage, 'prev')}><i className="fas fa-chevron-left"></i></div>
-                        <div className="hamburger"><i className="fas fa-bars"></i></div>
+                        <div className="hamburger" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
                 </div>
             );
         } else {
@@ -98,7 +99,7 @@ class Header extends Component {
                 <div id="header">
                         <div className="back-list" onClick={() => this.movePage(curPage, 'portfolio')}><i className="fas fa-ellipsis-h"></i></div>
                         <div className="prev" onClick={() => this.movePage(curPage, 'prev')}><i className="fas fa-chevron-left"></i></div>
-                        <div className="hamburger"><i className="fas fa-bars"></i></div>
+                        <div className="hamburger" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
                         <div className="next" onClick={() => this.movePage(curPage, 'next')}><i className="fas fa-chevron-right"></i></div>
                 </div>
             );
