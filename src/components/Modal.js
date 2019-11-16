@@ -1,18 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Modal = ({ show, toggle }) => {
     const showClassName = show ? 'modal display-block' : 'modal display-none'
     return (
         <div className={showClassName} >
             <div className="cls-btn" onClick={toggle}>X</div>
-            <div className="modal-main">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Portfolio</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
+            <ul className="modal-main">
+                <li><Link to='/' onClick={toggle}>Home</Link></li>
+                <li><Link to='/about' onClick={toggle}>About</Link></li>
+                <li><Link to='/portfolio' onClick={toggle}>Portfolio</Link></li>
+                <li><Link to='/contact' onClick={toggle}>Contact</Link></li>
+            </ul>
         </div>
     );
 };

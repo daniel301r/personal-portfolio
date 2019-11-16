@@ -4,9 +4,9 @@ const About = () => {
     // try and have it so you click and then it appears but for now don't worry
     // half and half the design to make it two different colors
     return (
-        <div id="about">
-            <div className="about-me">
-                <div className="about-me-container">
+        <div className="two-sided">
+            <div className="one-side dark-side">
+                <div className="one-side-container about-me-container">
                     <h1>About Me</h1>
                     <p>Hi, I'm Daniel from London</p>
                     <p>I'm a full-stack developer that likes working with Javascript and React.</p>
@@ -15,8 +15,8 @@ const About = () => {
                     <p>Thanks for taking a look at my page.</p>
                 </div>
             </div>
-            <div className="skills">
-                <div className="skills-container">
+            <div className="one-side skills">
+                <div className="one-side-container skills-container">
                     <h1>Skills</h1>
                     <div>
                         <h3>Languages</h3>
