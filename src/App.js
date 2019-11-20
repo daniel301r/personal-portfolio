@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+
+
 import Header from './components/Header';
-import FrontPage from './components/FrontPage';
-import Portfolio from './components/Portfolio';
-import Project from './components/Project';
-import About from './components/About';
-import Contact from './components/Contact';
+// import FrontPage from './components/FrontPage';
+// import Portfolio from './components/Portfolio';
+// import Project from './components/Project';
+// import About from './components/About';
+// import Contact from './components/Contact';
 import Modal from './components/Modal';
+import Container from './components/Container';
 
 import petImg from './img/adoptapet.png';
 import recipesImg from './img/recipes.png';
@@ -63,15 +66,9 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <Header show={this.state.modalShow} toggle={this.toggleModal}/>
-          <Modal show={this.state.modalShow} toggle={this.toggleModal}/>
-          <Switch>
-            <Route exact path='/' component={FrontPage}/>
-            <Route exact path='/portfolio' render={(props) => <Portfolio {...props} projects={this.state.projects} />}/>
-            <Route path='/portfolio/:project' render={(props) => <Project {...props} projects={this.state.projects} />}/>
-            <Route path='/about' component={About}/>
-            <Route path='/contact' component={Contact}/>
-          </Switch>    
+          <Header toggle={this.toggleModal} />
+          <Modal show={this.state.modalShow} toggle={this.toggleModal} />
+          <Container projects={this.state.projects}/>
         </BrowserRouter>
       </div>
     );

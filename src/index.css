@@ -43,6 +43,10 @@ a {
 
 /* Content Container */
 
+.container {
+  height: 100%;
+}
+
 .content-container {
   margin: 0 12%;
   height: 100%
@@ -52,6 +56,11 @@ a {
   color: var(--main-text-color);
   padding: 3rem;
   margin-top: 2rem;
+}
+
+.two-sided {
+  display: flex;
+  height: 100%;
 }
 
 /* header */
@@ -255,12 +264,6 @@ a {
 
 /* About Page + Contact */
 
-.two-sided {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
 .one-side {
   color: var(--main-text-color);
   width: 50%;
@@ -362,6 +365,26 @@ a {
   font-size: 2rem;
   color: var(--main-text-color);
   cursor: pointer;
+}
+
+/* Transitions */
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 400ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 400ms ease-in;
 }
 
 

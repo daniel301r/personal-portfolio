@@ -3,7 +3,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Portfolio = ({ projects }) => {
-       
     return (
         <div id="portfolio" className="content-container text-pages">
             <div className="about">
