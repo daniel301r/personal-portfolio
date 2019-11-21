@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const FrontPage = () => {
     return (
-        <div id="front-page" className="content-container">
+        <div className="content-container">
             <span className="tags top-tags">{"<body>"}</span>
             <div className="text-area">
                 <h1>Hi,<br/>I'm <span>D</span>an,<br/>web developer.</h1>
@@ -16,6 +16,7 @@ const FrontPage = () => {
                 <span>{"</html>"}</span>
             </span>
         </div>
+
     );
 };
 

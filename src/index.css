@@ -32,6 +32,10 @@ body {
   overflow-x: hidden;
 }
 
+/* .App::-webkit-scrollbar {
+  display: none;
+} */
+
 ul {
   list-style: none;
 }
@@ -41,7 +45,7 @@ a {
   color: inherit;
 }
 
-/* Content Container */
+/* Content Containers */
 
 .container {
   height: 100%;
@@ -49,19 +53,21 @@ a {
 
 .content-container {
   margin: 0 12%;
-  height: 100%
+  height: 100%;
+  position: relative;
 }
 
 .text-pages {
   color: var(--main-text-color);
-  padding: 3rem;
-  margin-top: 2rem;
+  padding: 2.8rem;
+  margin-top: 1.8rem;
 }
 
 .two-sided {
   display: flex;
   height: 100%;
 }
+
 
 /* header */
 #header {
@@ -181,23 +187,23 @@ a {
 /* Portfolio */
 
 .about {
-  margin-bottom: 2rem;
+  margin-bottom: 1.3rem;
 }
 
 .about h1 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
   font-size: 3rem;
   color: var(--secondary-text-color);
 }
 
 .about p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 2.2rem;
 }
 
 #portfolio-gallery ul{
   display: grid;
-  grid-gap: 0.9rem;
+  grid-gap: 0.7rem;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
   justify-items: center;
   margin-bottom: 1.5rem;
@@ -313,14 +319,18 @@ a {
 }
 
 /* Modal */
-
 .modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: #333;
+  background: #333; 
+}
+
+.modal.is-open {
+  display: block;
   z-index: 1;
 }
 
@@ -349,15 +359,6 @@ a {
   color: var(-);
 }
 
-
-.display-block{
-  display: block;
-}
-
-.display-none {
-  display: none;
-}
-
 .cls-btn {
   position: fixed;
   top: 5%;
@@ -365,6 +366,21 @@ a {
   font-size: 2rem;
   color: var(--main-text-color);
   cursor: pointer;
+}
+
+/* Transition Containers */
+
+.transition-group {
+  position: relative;
+  height: 100%;
+}
+
+.route-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 /* Transitions */
@@ -375,7 +391,8 @@ a {
 
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 400ms ease-in;
+  transition: opacity 1000ms ease-in;
+  transition-delay: 1s;
 }
 
 .fade-exit {
@@ -384,7 +401,7 @@ a {
 
 .fade-exit.fade-exit-active {
   opacity: 0.01;
-  transition: opacity 400ms ease-in;
+  transition: opacity 1000ms ease-in;
 }
 
 

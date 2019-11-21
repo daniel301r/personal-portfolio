@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Modal = ({ show, toggle }) => {
-    const showClassName = show ? 'modal display-block' : 'modal display-none'
+    const showClassName = show ? 'modal is-open' : 'modal'
     return (
         <div className={showClassName} >
             <div className="cls-btn" onClick={toggle}>X</div>

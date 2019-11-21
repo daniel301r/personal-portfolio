@@ -9,21 +9,23 @@ import Project from './Project';
 import About from './About';
 import Contact from './Contact';
 
-const Container = ({ location, projects }) => {
+const Container = ({ projects, location }) => {
     return (
-        <TransitionGroup className="container">
+        <TransitionGroup className="transition-group">
             <CSSTransition
             key={location.key}
             timeout={{ enter: 400, exit: 400 }}
             classNames={'fade'}
             >
-                <Switch location={location}>
-                    <Route exact path='/' component={FrontPage}/>
-                    <Route exact path='/portfolio' render={(props) => <Portfolio {...props} projects={projects} />}/>
-                    <Route path='/portfolio/:project' render={(props) => <Project {...props} projects={projects} />}/>
-                    <Route path='/about' component={About}/>
-                    <Route path='/contact' component={Contact}/>
-                </Switch>  
+                <section className="route-section">
+                    <Switch location={location}>
+                        <Route exact path='/' component={FrontPage}/>
+                        <Route exact path='/portfolio' render={(props) => <Portfolio {...props} projects={projects} />}/>
+                        <Route path='/portfolio/:project' render={(props) => <Project {...props} projects={projects} />}/>
+                        <Route path='/about' component={About}/>
+                        <Route path='/contact' component={Contact}/>
+                    </Switch> 
+                </section>
             </CSSTransition>
         </TransitionGroup>
     );
