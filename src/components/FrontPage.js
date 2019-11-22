@@ -1,12 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+import dLogo from '../img/letter-d.png'
+
 const FrontPage = () => {
     return (
         <div className="content-container">
             <span className="tags top-tags">{"<body>"}</span>
             <div className="text-area">
-                <h1>Hi,<br/>I'm <span>D</span>an,<br/>web developer.</h1>
+                <h1><span>H</span><span>i</span><span>,</span>
+                    <br/><span>I</span><span>'</span><span>m&nbsp;</span>
+                    <span className="colored-letter">D</span>
+                    <span>a</span><span>n</span><span>,</span>
+                    <br/><span>w</span><span>e</span><span>b&nbsp;</span>
+                    <span>d</span><span>e</span><span>v</span>
+                    <span>e</span><span>l</span><span>o</span>
+                    <span>p</span><span>e</span><span>r</span>
+                    <span>.</span>
+                    </h1>
                 <h4>Full-Stack Developer / React / Javascript</h4>
                 <Link to="/portfolio">Portfolio</Link>
             </div>
@@ -15,8 +26,8 @@ const FrontPage = () => {
                 <br/>
                 <span>{"</html>"}</span>
             </span>
+            <img className="d-logo" src={dLogo}/>
         </div>
-
     );
 };
 
