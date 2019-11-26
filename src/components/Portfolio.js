@@ -15,7 +15,7 @@ const Portfolio = ({ projects }) => {
                 <ul>
                     {projects.map((project, i) => {
                     return(
-                        <li key={i}>
+                        <li key={i} title={project.name}>
                             <Link to={"/portfolio/" + project.id}>
                                 <img src={project.img} alt="Not available"/>
                             </Link>

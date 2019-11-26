@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-
+import { BrowserRouter } from 'react-router-dom';
 
 import Header from './components/Header';
-// import FrontPage from './components/FrontPage';
-// import Portfolio from './components/Portfolio';
-// import Project from './components/Project';
-// import About from './components/About';
-// import Contact from './components/Contact';
 import Modal from './components/Modal';
 import Container from './components/Container';
 

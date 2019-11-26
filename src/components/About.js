@@ -15,7 +15,7 @@ const About = () => {
                     <p>Thanks for taking a look at my page.</p>
                 </div>
             </div>
-            <div className="one-side skills">
+            <div className="one-side">
                 <div className="one-side-container skills-container">
                     <h1>Skills</h1>
                     <div>

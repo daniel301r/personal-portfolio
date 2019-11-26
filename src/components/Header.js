@@ -59,47 +59,48 @@ class Header extends Component {
         if(curPage === '/'){
             return (
                 <div id="header">
-                    <div className="hamburger" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
-                    <div className="next" onClick={() => this.movePage(curPage, 'next')}><i className="fas fa-chevron-right"></i></div>
+                    <div className="prev" style={{display: 'none'}} onClick={() => this.movePage(curPage, 'prev')}><i className="fas fa-chevron-left"></i></div>
+                    <div className="hamburger" title="Menu" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
+                    <div className="next" title="About" onClick={() => this.movePage(curPage, 'next')}><i className="fas fa-chevron-right"></i></div>
                 </div>
             )
         } else if (curPage === '/about' || curPage === '/portfolio') {
             return (
                 <div id="header">
                         <div className="prev" onClick={() => this.movePage(curPage, 'prev')}><i className="fas fa-chevron-left"></i></div>
-                        <div className="hamburger" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
+                        <div className="hamburger" title="Menu" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
                         <div className="next" onClick={() => this.movePage(curPage, 'next')}><i className="fas fa-chevron-right"></i></div>
                 </div>
             ); 
         } else if (curPage === '/portfolio/find-a-pet'){
             return (
                 <div id="header">
-                        <div className="back-list" onClick={() => this.movePage(curPage, 'portfolio')}><i className="fas fa-ellipsis-h"></i></div>
-                        <div className="hamburger" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
+                        <div className="back-list" title="Back To Portfolio" onClick={() => this.movePage(curPage, 'portfolio')}><i className="fas fa-ellipsis-h"></i></div>
+                        <div className="hamburger" title="Menu" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
                         <div className="next" onClick={() => this.movePage(curPage, 'next')}><i className="fas fa-chevron-right"></i></div>
                 </div>
             );
         } else if (curPage === '/portfolio/portfolio') {
             return (
                 <div id="header">
-                        <div className="back-list" onClick={() => this.movePage(curPage, 'portfolio')}><i className="fas fa-ellipsis-h"></i></div>
+                        <div className="back-list" title="Back To Portfolio" onClick={() => this.movePage(curPage, 'portfolio')}><i className="fas fa-ellipsis-h"></i></div>
                         <div className="prev" onClick={() => this.movePage(curPage, 'prev')}><i className="fas fa-chevron-left"></i></div>
-                        <div className="hamburger" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
+                        <div className="hamburger"  title="Menu"onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
                 </div>
             );
         } else if (curPage === '/contact'){
             return (
                 <div id="header">
-                        <div className="prev" onClick={() => this.movePage(curPage, 'prev')}><i className="fas fa-chevron-left"></i></div>
-                        <div className="hamburger" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
+                        <div className="prev" title="Portfolio" onClick={() => this.movePage(curPage, 'prev')}><i className="fas fa-chevron-left"></i></div>
+                        <div className="hamburger"  title="Menu" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
                 </div>
             );
         } else {
             return (
                 <div id="header">
-                        <div className="back-list" onClick={() => this.movePage(curPage, 'portfolio')}><i className="fas fa-ellipsis-h"></i></div>
+                        <div className="back-list" title="Back To Portfolio" onClick={() => this.movePage(curPage, 'portfolio')}><i className="fas fa-ellipsis-h"></i></div>
                         <div className="prev" onClick={() => this.movePage(curPage, 'prev')}><i className="fas fa-chevron-left"></i></div>
-                        <div className="hamburger" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
+                        <div className="hamburger" title="Menu" onClick={this.props.toggle}><i className="fas fa-bars"></i></div>
                         <div className="next" onClick={() => this.movePage(curPage, 'next')}><i className="fas fa-chevron-right"></i></div>
                 </div>
             );
