@@ -8,7 +8,7 @@ const Portfolio = ({ projects }) => {
             <div className="about">
                 <h1>Web Developer Portfolio</h1>
                 <p>A selection of my recent projects using various technologies. From Vanilla JS to React
-                    with Redux, Express, Node.js and both MySQL and MongoDB. Click on the project for a closer look.
+                    with Redux, Express, Node.js and MongoDB. Click on the project for a closer look.
                 </p>
             </div>
             <div id="portfolio-gallery">
@@ -16,7 +16,7 @@ const Portfolio = ({ projects }) => {
                     {projects.map((project, i) => {
                     return(
                         <li key={i} title={project.name}>
-                            <Link to={"/portfolio/" + project.id}>
+                            <Link to={"/portfolio/" + project.id} >
                                 <img src={project.img} alt="Not available"/>
                             </Link>
                         </li>

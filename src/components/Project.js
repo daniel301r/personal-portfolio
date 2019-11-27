@@ -1,7 +1,5 @@
 import React from 'react';
 
-/* could try and get multiple images to show different parts of the app */
-
 const Project = ({ projects, match }) => {
     
     const id = match.params.project;
@@ -34,6 +32,7 @@ const Project = ({ projects, match }) => {
             </div>
             <div className="section">
                 <h4>About</h4>
+                <p>{project.about}</p>
             </div>
             <div className="section">
                 <h4>Technologies Used</h4>

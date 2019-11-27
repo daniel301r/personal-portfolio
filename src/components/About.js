@@ -9,10 +9,10 @@ const About = () => {
                 <div className="one-side-container about-me-container">
                     <h1>About Me</h1>
                     <p>Hi, I'm Daniel from London</p>
-                    <p>I'm a full-stack developer that likes working with Javascript and React.</p>
-                    <p>This is my personal portfolio showing some of my most recent projects</p>
-                    <p>Check out my portfolio and GitHub for more of my work.</p>
-                    <p>Thanks for taking a look at my page.</p>
+                    <p>I'm a full-stack developer that likes working with Javascript and React</p>
+                    <p>Feel free to take a look at my latest projects on the web portfolio page</p>
+                    <p>You can also check out GitHub for more of my work</p>
+                    <p>Thanks for stopping by my page</p>
                 </div>
             </div>
             <div className="one-side">

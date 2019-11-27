@@ -281,7 +281,12 @@ span.colored-letter {
  height: 100%;
  object-fit: cover;
  box-shadow: 8px 8px 0 rgba(0,0,0,.15);
+ transition: .5s;
 }
+
+#portfolio-gallery li img:hover{
+  transform: scale(1.01);
+ }
 
 /* Project */
 
