@@ -1,8 +1,8 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 const About = () => {
-    // try and have it so you click and then it appears but for now don't worry
-    // half and half the design to make it two different colors
     return (
         <div className="two-sided">
             <div className="one-side dark-side">
@@ -10,8 +10,8 @@ const About = () => {
                     <h1>About Me</h1>
                     <p>Hi, I'm Daniel from London</p>
                     <p>I'm a full-stack developer that likes working with Javascript and React</p>
-                    <p>Feel free to take a look at my latest projects on the web portfolio page</p>
-                    <p>You can also check out GitHub for more of my work</p>
+                    <p>Feel free to take a look at my latest projects on the <Link to="/portfolio">web portfolio page</Link></p>
+                    <p>You can also check out <a href="https://github.com/daniel301r" target="_blank">GitHub</a> for more of my work</p>
                     <p>Thanks for stopping by my page</p>
                 </div>
             </div>
