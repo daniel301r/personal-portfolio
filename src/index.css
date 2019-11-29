@@ -79,7 +79,7 @@ a {
   color: #8a8a8a;
   font-size: 2rem;
   cursor: pointer;
-  z-index: 1;
+  z-index: 4;
 }
 
 .prev, .next, .back-list,
@@ -116,6 +116,38 @@ a {
 }
 
 /* front page */
+
+.front-links-container {
+  position: absolute;
+  left: -15%;
+  top: 50%;
+  transform: translate(-55%, -50%);
+}
+
+.front-link {
+  font-size: 2rem;
+  width: 100px;
+  display: flex;
+  justify-content: flex-end;
+  padding: .6rem;
+  color: white;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.front-link:hover {
+  transform: translateX(15%);
+}
+
+.front-links-container div:nth-child(1) {
+  background-color: #4e545a;
+}
+
+.front-links-container div:nth-child(2) {
+  background-color: #0077ba;
+}
+
+
 
 .text-area {
   position: absolute;
@@ -410,13 +442,12 @@ p > a {
 
 /* Modal */
 .modal {
-  z-index: 2;
+  z-index: 5;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  /* check opacity */
   opacity: 0.9;
   background: #333; 
   transform: translateX(-100%);
@@ -441,6 +472,8 @@ p > a {
   padding: 1.8rem 16rem;
   text-align: center;
   transition: background 0.3s ease-in;
+  position: relative;
+  overflow: hidden;
 }
 
 .modal-main li a{
@@ -449,12 +482,76 @@ p > a {
   font-size: 2rem;
 }
 
-.modal-main li:hover{
-  background: var(--secondary-text-color);
+.modal-main li a span{
+  width: 100%;
+  display: block;
 }
 
-.modal-main li:hover a{
-  color: #2f2f2f;
+/* .modal-main li::before, .modal-main li::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 70%;  
+  opacity: 0;
+  transition: all .5s;
+} */
+
+.modal-main a::before, .modal-main a::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 70%;  
+  opacity: 0;
+  transition: all .5s;
+}
+
+/* .modal-main li::before {
+  background-color: #2e2e2e;
+  top: 0;
+  right: 100%;
+  z-index: -1;
+}
+
+
+.modal-main li::after{
+  background-color: #2d2d2d;
+  bottom: 0;
+  left: 100%;
+  z-index: -2;
+}
+
+.modal-main li:hover::before{
+  opacity: 1;
+  right: 0;
+}
+
+.modal-main li:hover::after{
+  opacity: 1;
+  left: 0;
+}  */
+
+.modal-main a::before {
+  background-color: #2e2e2e;
+  top: 0;
+  right: 100%;
+  z-index: 1;
+}
+
+.modal-main a::after{
+  background-color: #2d2d2d;
+  bottom: 0;
+  left: 100%;
+  z-index: 0;
+}
+
+.modal-main a:hover::before{
+  opacity: 1;
+  right: 0;
+}
+
+.modal-main a:hover::after{
+  opacity: 1;
+  left: 0;
 }
 
 .cls-btn {
