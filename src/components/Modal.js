@@ -7,10 +7,10 @@ const Modal = ({ show, toggle }) => {
         <div className={showClassName} >
             <div className="cls-btn" onClick={toggle}>X</div>
             <ul className="modal-main">
-                <li><Link to='/' onClick={toggle}><span>home</span></Link></li>
-                <li><Link to='/about' onClick={toggle}><span>about</span></Link></li>
-                <li><Link to='/portfolio' onClick={toggle}><span>portfolio</span></Link></li>
-                <li><Link to='/contact' onClick={toggle}><span>contact</span></Link></li>
+                <li><Link to='/' onClick={toggle}>home</Link></li>
+                <li><Link to='/about' onClick={toggle}>about</Link></li>
+                <li><Link to='/portfolio' onClick={toggle}>portfolio</Link></li>
+                <li><Link to='/contact' onClick={toggle}>contact</Link></li>
             </ul>
         </div>
     );
