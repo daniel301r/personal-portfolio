@@ -48,7 +48,8 @@ class App extends Component {
         img: portImg,
         description: 'Behind the scenes of this website',
         about: 'A single page portfolio site that allows users to view contact details, about section, portfolio and individual projects in more detail. CSS transitions and animations create smooth changes between components which are controlled using React Router.',
-        tech: ['React', 'React Router', 'CSS Animations']
+        tech: ['React', 'React Router', 'CSS Animations'],
+        frontEndLink: 'https://github.com/daniel301r/personal-portfolio'
     }],
     modalShow: false
   }
