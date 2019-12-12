@@ -15,7 +15,7 @@ const Contact = () => {
                 <div className="one-side-container contact-container">
                     <h1>Contact</h1>
                     <h3>Get in touch:</h3>
-                    <p>daniel.munns248@gmail.com</p>
+                    <p>daniel@danielmunns.net</p>
                 </div>
             </div>
         </div>
