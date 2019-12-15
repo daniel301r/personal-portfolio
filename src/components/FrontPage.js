@@ -8,8 +8,8 @@ const FrontPage = () => {
         <div className="content-container">
             <span className="tags top-tags">{"<body>"}</span>
             <div className="front-links-container">
-                <div className="front-link"><a href="https://github.com/daniel301r" target="_blank"><i className="fab fa-github"></i></a></div>
-                <div className="front-link"><a href="https://www.linkedin.com/in/daniel-munns/" target="_blank"><i className="fab fa-linkedin-in"></i></a></div>
+                <div className="front-link"><a href="https://github.com/daniel301r" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a></div>
+                <div className="front-link"><a href="https://www.linkedin.com/in/daniel-munns/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></div>
             </div>
             <div className="text-area">
                 <h1><span>H</span><span>i</span><span>,</span>

@@ -11,7 +11,7 @@ const About = () => {
                     <p>Hi, I'm Daniel from London</p>
                     <p>I'm a full-stack developer that likes working with Javascript and React</p>
                     <p>Feel free to take a look at my latest projects on the <Link to="/portfolio">web portfolio page</Link></p>
-                    <p>You can also check out <a href="https://github.com/daniel301r" target="_blank">GitHub</a> for more of my work</p>
+                    <p>You can also check out <a href="https://github.com/daniel301r" target="_blank" rel="noopener noreferrer">GitHub</a> for more of my work</p>
                     <p>Thanks for stopping by my page</p>
                 </div>
             </div>

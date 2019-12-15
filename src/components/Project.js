@@ -18,15 +18,15 @@ const Project = ({ projects, match }) => {
                 <ul>
                     {project.frontEndLink && 
                         <li>Front End Code: 
-                            <a href={project.frontEndLink} target="_blank"> {project.frontEndLink}</a>
+                            <a href={project.frontEndLink} target="_blank" rel="noopener noreferrer"> {project.frontEndLink}</a>
                         </li>}
                     {project.backEndLink && 
                         <li>Back End Code: 
-                            <a href={project.backEndLink} target="_blank"> {project.backEndLink}</a>
+                            <a href={project.backEndLink} target="_blank" rel="noopener noreferrer"> {project.backEndLink}</a>
                         </li>}
                     {project.liveLink && 
                         <li>Live Demo: 
-                            <a href={project.liveLink} target="_blank"> {project.liveLink}</a>
+                            <a href={project.liveLink} target="_blank" rel="noopener noreferrer"> {project.liveLink}</a>
                         </li>}
                 </ul>
             </div>

@@ -5,11 +5,13 @@ import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Modal from './components/Modal';
 import Container from './components/Container';
+import SplashScreen from './components/SplashScreen';
 
 import petImg from './img/adoptapet.png';
 import recipesImg from './img/recipes.png';
 import quizImg from './img/quiz.png';
 import portImg from './img/portfolio.png';
+
 
 class App extends Component {
 
@@ -51,9 +53,16 @@ class App extends Component {
         tech: ['React', 'React Router', 'CSS Animations'],
         frontEndLink: 'https://github.com/daniel301r/personal-portfolio'
     }],
-    modalShow: false
+    modalShow: false,
+    showLoadingPage: true
   }
   
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.setState({ showLoadingPage: false })
+    },3500)
+  }
+
   toggleModal = () => {
     this.setState({
       modalShow: !this.state.modalShow
@@ -64,9 +73,10 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
+          {this.state.showLoadingPage ? <SplashScreen /> : ""}
           <Header toggle={this.toggleModal} />
           <Modal show={this.state.modalShow} toggle={this.toggleModal} />
-          <Container projects={this.state.projects}/>
+          <Container projects={this.state.projects} showLoading={this.state.showLoadingPage}/>
         </BrowserRouter>
       </div>
     );
