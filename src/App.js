@@ -73,7 +73,7 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-          {this.state.showLoadingPage ? <SplashScreen /> : ""}
+          <SplashScreen show={this.state.showLoadingPage}/>
           <Header toggle={this.toggleModal} />
           <Modal show={this.state.modalShow} toggle={this.toggleModal} />
           <Container projects={this.state.projects} showLoading={this.state.showLoadingPage}/>

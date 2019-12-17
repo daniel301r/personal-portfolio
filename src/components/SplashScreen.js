@@ -1,8 +1,9 @@
 import React from 'react';
 
-const SplashScreen = () => {
+const SplashScreen = ({ show }) => {
+    const showSplashScreen = show ? "loader-bg open" : "loader-bg";
     return (
-        <div className="loader-bg">
+        <div className={showSplashScreen}>
             <div className="loader"></div>
         </div>
     );
