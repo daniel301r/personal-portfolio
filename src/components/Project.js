@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 
 const Project = ({ projects, match }) => {
     
@@ -12,7 +13,9 @@ const Project = ({ projects, match }) => {
                 <h1>{project.name}</h1>
                 <p>{project.description}</p>
             </div>
-            <img src={project.img}/>
+            <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                <img src={project.img}/>
+            </a>
             <div className="section">
                 <h4>Links</h4>
                 <ul>
@@ -40,6 +43,7 @@ const Project = ({ projects, match }) => {
                     {project.tech.map((el, i) => <li key={i}>{el}</li>)} 
                 </ul>
             </div>
+            <Footer />
         </div>
     );
 };

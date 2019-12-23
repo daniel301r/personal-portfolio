@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Modal from './components/Modal';
 import Container from './components/Container';
-import SplashScreen from './components/SplashScreen';
+import LoadingPage from './components/LoadingPage';
 
 import petImg from './img/adoptapet.png';
 import recipesImg from './img/recipes.png';
@@ -73,7 +73,7 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <SplashScreen show={this.state.showLoadingPage}/>
+          <LoadingPage show={this.state.showLoadingPage}/>
           <Header toggle={this.toggleModal} />
           <Modal show={this.state.modalShow} toggle={this.toggleModal} />
           <Container projects={this.state.projects} showLoading={this.state.showLoadingPage}/>

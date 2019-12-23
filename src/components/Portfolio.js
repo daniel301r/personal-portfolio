@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 const Portfolio = ({ projects }) => {
     return (
@@ -24,6 +25,7 @@ const Portfolio = ({ projects }) => {
                 })}
                 </ul>
             </div>
+            <Footer />
         </div>
     );
 }
